@@ -1,6 +1,6 @@
 # stm32cubemx＋gcc+vscode工具链及jlink+ozone调试环境搭建
 
-[TOC]
+
 
 ## 1. 安装VScode
 
@@ -46,7 +46,6 @@ pacman -S make mingw-w64-x86_64-toolchain mingw-w64-x86_64-arm-none-eabi-toolcha
 
 - 搜索“环境变量”
 
-  <img src="file:///C:\Users\20621\Documents\Tencent Files\2062191603\nt_qq\nt_data\Pic\2026-05\Ori\0404543cf4e8e792200172a628d926a9.png" alt="img" style="zoom:50%;" />
 
 - 打开“编辑系统环境变量”
 
@@ -54,9 +53,7 @@ pacman -S make mingw-w64-x86_64-toolchain mingw-w64-x86_64-arm-none-eabi-toolcha
 
 - 找到系统变量 `Path`
 
-  <img src="C:\Users\20621\AppData\Roaming\Typora\typora-user-images\image-20260523091750962.png" alt="image-20260523091750962" style="zoom:50%;" />
 
-- 点“编辑”
 
 加入两项路径（根据你自己的路径来添加）。
 
@@ -139,7 +136,7 @@ crtl+`   （Esc键下面那个）打开终端，发现没有msys2终端。
 
 然后再打开终端下拉按键，看看是否有出现msys2终端
 
-<img src="file:///C:\Users\20621\Documents\Tencent Files\2062191603\nt_qq\nt_data\Pic\2026-05\Ori\912f86cecc70b4813266081b30207900.png" alt="img" style="zoom:80%;" />
+
 
 若没有，关闭vscode或按 `Ctrl + Shift + P`，输入reload windows，再看看是否成功
 
@@ -180,10 +177,7 @@ cd "(工程的makefile文件所在的相对路径) "
 
 
 
-
-![image-20260523193800054](C:\Users\20621\AppData\Roaming\Typora\typora-user-images\image-20260523193800054.png)
-
-第二张图是选择对应型号的stm32芯片
+选择对应型号的stm32芯片
 
 
 
@@ -191,9 +185,8 @@ cd "(工程的makefile文件所在的相对路径) "
 
 找到对应的.svd文件，并下载
 
-<img src="file:///C:\Users\20621\Documents\Tencent Files\2062191603\nt_qq\nt_data\Pic\2026-05\Ori\ef2dfcb80fb5498f0fb3e8d153e60597.png" alt="img" style="zoom:95%;" />
 
-点击蓝色框的Peripherals，选择你准备好的 .svd`文件，然后继续下一步即可
+点击Peripherals，选择你准备好的 .svd`文件，然后继续下一步即可
 
 文件选择 /build 文件夹中的 .elf 文件，然后就可以在ozone中打开工程。
 
